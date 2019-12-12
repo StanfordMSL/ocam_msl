@@ -33,7 +33,7 @@ USB2.0 - 1280x960@22.5fps, 1280x720@30fps, 640x480@80fps, 320x240@160fps
   <arg name="image_width"       default="640" />
   <arg name="image_height"      default="480" />
 
-  <node pkg="ocam_msl" type="ocam.py" name="ocam" output="screen">
+  <node pkg="ocam_msl" type="ocam" name="ocam" output="screen">
     <param name="resolution"        value="$(arg resolution)"/>
     <param name="frame_rate"        value="$(arg frame_rate)"/>
     <param name="exposure"          value="$(arg exposure)"/>
