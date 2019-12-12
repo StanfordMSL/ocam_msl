@@ -29,7 +29,7 @@ USB2.0 - 1280x960@22.5fps, 1280x720@30fps, 640x480@80fps, 320x240@160fps
   <arg name="auto_exposure"     default="false" />
   <arg name="show_image"        default="false" />
   <arg name="camera_frame_id"   default="camera" />
-  <arg name="param_file"        default="ocam/param/camera.yaml" />
+  <arg name="param_file"        default="ocam_msl/param/camera.yaml" />
   <arg name="image_width"       default="640" />
   <arg name="image_height"      default="480" />
 
