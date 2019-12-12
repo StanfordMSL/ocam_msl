@@ -18,20 +18,21 @@ USB2.0 - 1280x960@22.5fps, 1280x720@30fps, 640x480@80fps, 320x240@160fps
 -->
 
 <!-- To only change resolution (instead of cropping), leave resolution=0, and specify the image_width and image_height parameters in launch file. If these parameters are left blank, no resizing will take place.  -->
-<arg name="resolution"        default="0" />
-<arg name="frame_rate"        default="5" />
-<arg name="exposure"          default="150" />
-<arg name="gain"              default="50" />
-<arg name="wb_blue"           default="200" />
-<arg name="wb_red"            default="160" />
-<arg name="auto_exposure"     default="false" />
-<arg name="show_image"        default="false" />
-<arg name="camera_frame_id"   default="camera" />
-<arg name="param_file"        default="ocam/param/camera.yaml" />
-<arg name="image_width"       default="640" />
-<arg name="image_height"      default="480" />
 
 <launch>
+  <arg name="resolution"        default="0" />
+  <arg name="frame_rate"        default="5" />
+  <arg name="exposure"          default="150" />
+  <arg name="gain"              default="50" />
+  <arg name="wb_blue"           default="200" />
+  <arg name="wb_red"            default="160" />
+  <arg name="auto_exposure"     default="false" />
+  <arg name="show_image"        default="false" />
+  <arg name="camera_frame_id"   default="camera" />
+  <arg name="param_file"        default="ocam/param/camera.yaml" />
+  <arg name="image_width"       default="640" />
+  <arg name="image_height"      default="480" />
+
   <node pkg="ocam" type="ocam" name="ocam" output="screen">
     <param name="resolution"        value="$(arg resolution)"/>
     <param name="frame_rate"        value="$(arg frame_rate)"/>
