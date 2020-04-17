@@ -30,8 +30,8 @@ USB2.0 - 1280x960@22.5fps, 1280x720@30fps, 640x480@80fps, 320x240@160fps
   <arg name="show_image"        default="false" />
   <arg name="camera_frame_id"   default="camera" />
   <arg name="param_file"        default="ocam_msl/param/camera.yaml" />
-  <arg name="image_width"       default="1280" />
-  <arg name="image_height"      default="960" />
+  <arg name="image_width"       default="640" />
+  <arg name="image_height"      default="480" />
 
   <node pkg="ocam_msl" type="ocam" name="ocam" output="screen">
     <param name="resolution"        value="$(arg resolution)"/>

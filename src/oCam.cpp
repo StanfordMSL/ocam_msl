@@ -199,10 +199,13 @@ private:
                 ROS_INFO_ONCE("Success, found camera");
             }
 
-            // Added by Eric Cristofalo 2018/11/19
-            if (image_width_!=0 && image_height_!=0) {
+            // Added by Eric Cristofalo 2018/11/19 and modified by Adam Caccavale 2020/04/17
+            if (image_width_!=0 && image_height_!=0 && image_width_ < 1280 && image_height_ < 960 && std::abs(double(image_width_)/double(image_height_) - 1280.0 / 960.0) < 0.01 ) {
                 cv::resize(camera_image,camera_image,cv::Size(image_width_,image_height_));
             }
+            else {
+		std::cout << "Warning: image not resized. New width height must be less than original image size and same aspect ratio (1280 x 960)" << std::endl;
+	    }
 
 
             if (camera_image_pub.getNumSubscribers() > 0) {
